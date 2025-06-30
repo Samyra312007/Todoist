@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todoist - Best platform to manage your tasks</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">
+        <nav class="navbar">
+          <h1 class="todoist">TODOist</h1>
+          <div class="darkmode">
+            <div>
+              <input type="checkbox" class="checkbox" id="checkbox" />
+              <label for="checkbox" class="checkbox-label">
+                <span class="ball"></span>
+              </label>
+            </div>
+          </div>
+          <input class="searchinput" placeholder="Search Todo..." type="text" />
+        </nav>
+      </div>
+
+      <div class="item">
+        <div class="titleinput">
+          <input
+            class="titleinputinput"
+            id="titleinput"
+            placeholder="Add todo title..."
+            type="text"
+          />
+        </div>
+        <div class="descinput">
+          <textarea
+            placeholder="Add your todo description here..."
+            name="tododesc"
+            class="descinputinput"
+            id="descinput"
+          ></textarea>
+        </div>
+        <div class="buttons">
+          <button class="clearbutton" onclick="clearInputField()">Clear</button>
+          <button class="addtodobutton" onclick="addTodo()">Add Todo</button>
+        </div>
+        <div class="totaltodos">
+          <h3>Todoist stats</h3>
+          <p id="totaltodos">Total Todos:</p>
+          <p id="pendingtodos">Pending Todos:</p>
+          <p id="completedtodos">Completed Todos:</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="todos" id="todos"><span id="notodos">No todos added yet!</span></div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

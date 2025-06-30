@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif, "Montserrat";
+}
+
+body {
+  margin: 1.5rem;
+  background-color: #b3b3b3;
+  min-height: 80vh;
+}
+
+.container {
+  display: flex;
+  gap: 2%;
+  flex-wrap: wrap;
+  align-content: start;
+}
+
+.item:nth-child(1) {
+  width: 100%;
+  height: 5%;
+}
+
+.item:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  width: 40%;
+  height: 75%;
+  background-color: #cccccc;
+  margin: 0.5rem;
+  padding: 1.4rem;
+  border-radius: 8px;
+}
+
+body.darkmode .item:nth-child(2) {
+  background-color: #3d3d3d;
+}
+
+.item:nth-child(3) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  flex-grow: 1;
+  height: 75%;
+  background-color: #cccccc;
+  margin: 0.5rem;
+  padding: 1.4rem;
+  border-radius: 8px;
+}
+
+body.darkmode .item:nth-child(3) {
+  background-color: #3d3d3d;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  align-items: center;
+  padding: 0.8rem;
+  background-color: #cccccc;
+  border-radius: 1rem;
+}
+
+body.darkmode .navbar {
+  background-color: #3d3d3d;
+}
+
+.todoist {
+  font-size: xx-large;
+  font-weight: bolder;
+  color: #e0e0e0;
+}
+
+body.darkmode .todoist {
+  color: #4d4d4d;
+}
+
+body.darkmode {
+  background-color: #292c35;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: #929191;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+
+.searchinput {
+  border: 2px solid #f5f5f5;
+  border-radius: 0.8rem;
+  padding: 10px;
+}
+
+.searchinput:focus {
+  border: 3px solid #b3b3b3;
+  outline: none;
+}
+
+body.darkmode .searchinput {
+  background-color: #3a3535;
+  border: 2px solid #292c35;
+}
+
+body.darkmode .searchinput:focus {
+  border: 3px solid #4d4d4d;
+}
+
+.titleinput {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.titleinputinput {
+  border: 2px solid #f5f5f5;
+  border-radius: 0.8rem;
+  padding: 10px;
+  width: 30rem;
+  color: #a9a9a9;
+}
+
+.titleinputinput:focus {
+  border: 3px solid #b3b3b3;
+  outline: none;
+}
+
+body.darkmode .titleinputinput {
+  background-color: #3a3535;
+  border: 2px solid #292c35;
+}
+
+body.darkmode .titleinputinput:focus {
+  border: 3px solid #4d4d4d;
+}
+
+.descinput {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.descinputinput {
+  border: 2px solid #f5f5f5;
+  border-radius: 0.8rem;
+  padding: 10px;
+  width: 30rem;
+  height: 10rem;
+  color: #a9a9a9;
+  resize: none;
+}
+
+.descinputinput:focus {
+  border: 3px solid #b3b3b3;
+  outline: none;
+}
+
+body.darkmode .descinputinput {
+  background-color: #3a3535;
+  border: 2px solid #292c35;
+}
+
+body.darkmode .descinputinput:focus {
+  border: 3px solid #4d4d4d;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.clearbutton {
+  padding: 0.7rem 1rem;
+  border: 2px solid #cccccc;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #f8f8ff;
+  color: #a9a9a9;
+}
+
+.clearbutton:hover {
+  background-color: #696969;
+}
+
+body.darkmode .clearbutton {
+  background-color: #3a3a3a;
+  border: 2px solid #4d4d4d;
+}
+
+body.darkmode .clearbutton:hover {
+  background-color: #3e3e3e;
+}
+
+.addtodobutton {
+  padding: 0.7rem 1rem;
+  border: 2px solid #cccccc;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #a9a9a9;
+  background-color: #f8f8ff;
+}
+
+.addtodobutton:hover {
+  background-color: #696969;
+}
+
+body.darkmode .addtodobutton {
+  background-color: #3a3a3a;
+  border: 2px solid #4d4d4d;
+}
+
+body.darkmode .addtodobutton:hover {
+  background-color: #3e3e3e;
+}
+
+.totaltodos {
+  background-color: #f5f5f5;
+  margin: 1rem;
+  padding: 1rem;
+  letter-spacing: 2px;
+  color: #a9a9a9;
+  border-radius: 8px;
+  width: 30rem;
+}
+
+body.darkmode .totaltodos {
+  background-color: #3a3a3a;
+}
+
+.domtodo {
+  display: flex;
+  background-color: #a9a9a9;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  gap: 8px;
+}
+
+body.darkmode .domtodo {
+  background-color: #696969;
+}
+
+.todowrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.todowrapper h3 {
+  font-size: large;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.descwrapper {
+  text-wrap: wrap;
+  width: 20rem;
+  font-size: small;
+  font-weight: 400;
+  margin-bottom: 0.4rem;
+}
+
+.deletebutton {
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #a9a9a9;
+  background-color: #f8f8ff;
+}
+
+.deletebutton:hover {
+  background-color: #696969;
+}
+
+body.darkmode .deletebutton {
+  background-color: #3a3a3a;
+  border: 2px solid #4d4d4d;
+}
+
+body.darkmode .deletebutton:hover {
+  background-color: #3e3e3e;
+}
+
+.buttonwrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.donebutton {
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #a9a9a9;
+  background-color: #f8f8ff;
+}
+
+.donebutton:hover {
+  background-color: #696969;
+}
+
+body.darkmode .donebutton {
+  background-color: #3a3a3a;
+  border: 2px solid #4d4d4d;
+}
+
+body.darkmode .deletebutton:hover {
+  background-color: #3e3e3e;
+}
+
+.domtodohighlight {
+  border: 3px solid #4CAF50;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+body.darkmode .domtodohighlight {
+  border: 3px solid #8BC34A;
+  box-shadow: 0 0 10px rgba(139, 195, 74, 0.5);
+}
